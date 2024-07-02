@@ -1,0 +1,94 @@
+.delivery-number-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.delivery-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  gap: 10px;
+  width: 100%;
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18.75px;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+
+  &-time {
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    color: #9397a5;
+  }
+}
+
+.image-textbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  &-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    letter-spacing: 0.02em;
+  }
+
+  &-address {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    letter-spacing: 0.02em;
+  }
+}
+
+.number-textbox {
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.41px;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    height: 50%;
+  }
+
+  &-number {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23.44px;
+    letter-spacing: 0.02em;
+    color: #4d81e7;
+  }
+}

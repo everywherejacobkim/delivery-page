@@ -1,0 +1,12 @@
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  gap: 5px;
+
+  p {
+    text-align: start;
+    margin: 0;
+  }
+}

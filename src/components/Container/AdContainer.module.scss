@@ -1,0 +1,19 @@
+.ad-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 123px;
+  background-color: #edf2f7;
+  border-radius: 8px;
+}
+
+.ad-image {
+  width: 100%;
+  max-height: 125px;
+  border-radius: 8px;
+}
+
+.placeholder {
+  color: #a8bacc;
+}
