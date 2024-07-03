@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./StatusBar.module.scss";
 import cellularImage from "../../assets/icons/Cellular.png";
 import wifiImage from "../../assets/icons/Wifi.png";
@@ -12,6 +12,20 @@ const StatusBar = () => {
       hour12: false,
     })
   );
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(
+        new Date().toLocaleTimeString([], {
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })
+      );
+    }, 60000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className={styles["container"]}>
