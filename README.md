@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project involved recreating a given single-page UI design using a preferred tech stack below.
+This project involved creating a given single-page UI design using a preferred tech stack below.
 
 - Used React to break down the UI into reusable components.
 - Created reusable components for better maintainability and consistency.
