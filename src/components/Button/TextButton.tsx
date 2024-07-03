@@ -10,6 +10,7 @@ type Props = {
   fontSize?: string;
   fontWeight?: number;
   radius?: string;
+  onClick?: () => void;
 };
 
 const TextButton = ({
@@ -22,6 +23,7 @@ const TextButton = ({
   fontWeight,
   radius,
   height,
+  onClick,
 }: Props) => {
   const buttonStyle = {
     display: "flex",
@@ -36,9 +38,14 @@ const TextButton = ({
     fontSize: fontSize || "14px",
     borderRadius: radius || "100px",
     border: "none",
+    cursor: "pointer",
   };
 
-  return <button style={buttonStyle}>{text}</button>;
+  return (
+    <button style={buttonStyle} onClick={onClick}>
+      {text}
+    </button>
+  );
 };
 
 export default TextButton;

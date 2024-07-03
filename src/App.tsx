@@ -6,13 +6,13 @@ import StatusBar from "./components/StatusBar/StatusBar";
 import Left from "./assets/icons/Left.png";
 import TextButton from "./components/Button/TextButton";
 import AdContainer from "./components/Container/AdContainer";
-import "./App.css";
 import ImageTextBox from "./components/TextBox/ImageTextbox";
 import Fedex from "./assets/images/Fedex-Logo.png";
 import NumberTextBox from "./components/TextBox/NumberTextbox";
 import copyIcon from "./assets/icons/Copy.png";
 import IconButton from "./components/Button/IconButton";
 import LockerIcon from "./assets/icons/Locker.png";
+import "./App.scss";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false);
@@ -38,9 +38,11 @@ function App() {
           Code copied to clipboard!
         </Alert>
       )}
-      <div className="icon">
-        <img src={Left} width={32} height={32} alt="left-icon" />
-      </div>
+      {isMobile && (
+        <div className="icon">
+          <img src={Left} width={32} height={32} alt="left-icon" />
+        </div>
+      )}
       <div className="flex-row">
         <DeliveryNumber deliveryNumber={487303} />
         <TextButton
@@ -53,15 +55,17 @@ function App() {
         />
       </div>
       <AdContainer />
-      <Divider className="divider" />
-      <DeliveryDetail deliveredTime="2023-10-17 17:05:54" />
-      <ImageTextBox
-        carrierLogo={Fedex}
-        carrierName="Fedex"
-        address1="Bluebits Office Metrotown"
-        address2="4289 Kingsway, Burnaby, BC, Canada, V6B0C8"
-      />
-      <div className="flex">
+      {isMobile ? <Divider className="divider" /> : null}
+      <div className="deliver-details">
+        <DeliveryDetail deliveredTime="2023-10-17 17:05:54" />
+        <ImageTextBox
+          carrierLogo={Fedex}
+          carrierName="Fedex"
+          address1="Bluebits Office Metrotown"
+          address2="4289 Kingsway, Burnaby, BC, Canada, V6B0C8"
+        />
+      </div>
+      <div className="code-details">
         <NumberTextBox
           title="Pick-up Code"
           number="288-234-123"
@@ -81,8 +85,8 @@ function App() {
         fontSize="16px"
         fontWeight={600}
       />
-      <Divider className="divider" />
-      <div className="flex-col">
+      {isMobile ? <Divider className="divider" /> : null}
+      <div className="flex-col bottom-buttons">
         <IconButton
           title="Residential Unit Registration"
           desc="Register your unit with BlueBox to enable delivery by unit feature."

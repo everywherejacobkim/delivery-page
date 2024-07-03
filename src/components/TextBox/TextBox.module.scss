@@ -1,10 +1,4 @@
-.delivery-number-text {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28.13px;
-  letter-spacing: 0.02em;
-  text-align: left;
-}
+@import "../../styles/breakpoint.scss";
 
 .delivery-detail {
   display: flex;
@@ -14,12 +8,21 @@
   gap: 10px;
   width: 100%;
 
+  @include lg {
+    width: auto;
+    margin-top: 10px;
+  }
+
   &-title {
     font-size: 16px;
     font-weight: 600;
     line-height: 18.75px;
     letter-spacing: 0.02em;
     margin: 0;
+
+    @include lg {
+      font-size: 20px;
+    }
   }
 
   &-time {
@@ -28,6 +31,10 @@
     font-weight: 400;
     line-height: 14.06px;
     color: #9397a5;
+
+    @include lg {
+      font-size: 14px;
+    }
   }
 }
 
@@ -37,6 +44,10 @@
   align-items: center;
   gap: 10px;
   width: 100%;
+
+  @include lg {
+    width: auto;
+  }
 
   p {
     margin: 0;
@@ -54,6 +65,10 @@
     font-weight: 500;
     line-height: 16.41px;
     letter-spacing: 0.02em;
+
+    @include lg {
+      font-size: 18px;
+    }
   }
 
   &-address {
@@ -74,6 +89,10 @@
     line-height: 16.41px;
     letter-spacing: 0.02em;
     margin-bottom: 0;
+
+    @include lg {
+      font-size: 20px;
+    }
   }
 
   &-wrapper {
@@ -90,5 +109,18 @@
     line-height: 23.44px;
     letter-spacing: 0.02em;
     color: #4d81e7;
+  }
+}
+
+.delivery-number-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.13px;
+  letter-spacing: 0.02em;
+  text-align: left;
+
+  @include lg {
+    font-size: 28px;
+    margin: 20px;
   }
 }

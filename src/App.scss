@@ -1,0 +1,89 @@
+@import "./styles/breakpoint.scss";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px 40px 10px;
+  gap: 20px;
+  position: relative;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  @include lg {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  img {
+    cursor: pointer;
+    transform: translateX(-10px);
+  }
+}
+
+.divider {
+  width: 100%;
+}
+
+.alert {
+  position: absolute;
+  top: 10px;
+  z-index: 50;
+}
+
+.deliver-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  @include lg {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+    transform: translateX(70px);
+    margin-top: 40px;
+  }
+}
+
+.code-details {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+
+  @include lg {
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+    margin-bottom: 40px;
+  }
+}
+
+.bottom-buttons {
+  @include lg {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0;
+  }
+}
