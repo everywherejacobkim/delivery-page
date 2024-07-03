@@ -7,7 +7,7 @@ This project involved creating a given single-page UI design using a preferred t
 - Used React to break down the UI into reusable components.
 - Created reusable components for better maintainability and consistency.
 - Implemented media queries to ensure the design adapts to different screen sizes.
-- Applied different styles for mobile and web to ensure the best possible user experience on each platform.
+- Applied different styles for <b>mobile</b> and web to ensure the best possible user experience on each platform.
 
 ## Tech Stack
 
