@@ -97,8 +97,8 @@ function App() {
           iconHeight="25px"
         />
         <IconButton
-          title="Residential Unit Registration"
-          desc="Register your unit with BlueBox to enable delivery by unit feature."
+          title="Create a support ticket"
+          desc="Submit a support ticket form to us."
           icon={LockerIcon}
           width="100%"
           fontWeight={600}
